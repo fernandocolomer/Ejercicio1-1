@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editTextN1, editTextN2;
+    EditText editTextuno, editTextdos;
     Button botonSumar, botonRestar,botonMultiplicar, botonDividir;
 
 
@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // inicializamos las variables
-        editTextN1 = (EditText) findViewById(R.id.txtnumerouno);
-        editTextN2 = (EditText) findViewById(R.id.txtnumerodos);
+
+        editTextuno = (EditText) findViewById(R.id.txtnumerouno);
+        editTextdos = (EditText) findViewById(R.id.txtnumerodos);
 
         botonSumar = (Button) findViewById(R.id.btnsuma);
         botonRestar = (Button) findViewById(R.id.btnresta);
@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double numero1,numero2,resultado;
-                numero1=Double.valueOf(editTextN1.getText().toString());
-                numero2=Double.valueOf(editTextN2.getText().toString());
+                numero1=Double.valueOf(editTextuno.getText().toString());
+                numero2=Double.valueOf(editTextdos.getText().toString());
                 resultado=numero1+numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la suma: "+resultado);
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double numero1,numero2,resultado;
-                numero1=Double.valueOf(editTextN1.getText().toString());
-                numero2=Double.valueOf(editTextN2.getText().toString());
+                numero1=Double.valueOf(editTextuno.getText().toString());
+                numero2=Double.valueOf(editTextdos.getText().toString());
                 resultado=numero1-numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la resta: "+resultado);
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double numero1,numero2,resultado;
-                numero1=Double.valueOf(editTextN1.getText().toString());
-                numero2=Double.valueOf(editTextN2.getText().toString());
+                numero1=Double.valueOf(editTextuno.getText().toString());
+                numero2=Double.valueOf(editTextdos.getText().toString());
                 resultado=numero1/numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la division: "+resultado);
@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 double numero1,numero2,resultado;
-                numero1=Double.valueOf(editTextN1.getText().toString());
-                numero2=Double.valueOf(editTextN2.getText().toString());
+                numero1=Double.valueOf(editTextuno.getText().toString());
+                numero2=Double.valueOf(editTextdos.getText().toString());
                 resultado=numero1*numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la multiplicacion: "+resultado);
