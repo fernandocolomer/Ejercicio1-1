@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 resultado=numero1+numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la suma: "+resultado);
-
+                startActivity(intent);
             }
         });
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 resultado=numero1-numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la resta: "+resultado);
-
+                startActivity(intent);
             }
         });
 
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 resultado=numero1/numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la division: "+resultado);
+                startActivity(intent);
             }
         });
 
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 resultado=numero1*numero2;
                 Intent intent = new Intent(getApplicationContext(),MainActivityResultado.class);
                 intent.putExtra("resultado","Total de la multiplicacion: "+resultado);
+                startActivity(intent);
             }
 
         });
